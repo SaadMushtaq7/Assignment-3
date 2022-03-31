@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 191, 166, 0.3);
+  position: fixed;
+  display: flex;
+  top: 0%;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalEditContainer {
+  width: 40%;
+  height: 75%;
+  border-radius: 12px;
+  background-color: #00bfa6;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  font-family: "Poppins";
+}
+
+.modalEditContainer .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+.modalEditContainer .title h1 {
+  color: #fff;
+}
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.modalEditContainer .body {
+  margin-left: 27%;
+}
+
+.modalEditContainer .body input {
+  margin: 5px;
+  width: 250px;
+  background-color: #fff;
+  color: black;
+  font-size: 14px;
+  border-radius: 20px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #00bfa6;
+}
+
+.modalEditContainer .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalEditContainer .footer button {
+  width: 150px;
+  height: 45px;
+  margin: 10px;
+  border: none;
+  background-color: #20dbc2;
+  color: white;
+  border-radius: 8px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+#cancelBtn {
+  background-color: crimson;
+}
+
+.modalEditContainer .footer button:hover {
+  width: 160px;
+  height: 50px;
+}
+.modalEditContainer .footer button:hover,
+.modalEditContainer .footer button:focus,
+.titleCloseBtn button:hover,
+.titleCloseBtn button:focus {
+  outline: none;
+}

@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+.user-modal-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-modal-container {
+  width: 75%;
+  border-radius: 12px;
+  background-color: #00bfa6;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  font-family: "Poppins";
+}
+.user-modal-container .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.user-modal-container .title h2,
+.user-modal-container .title h4 {
+  color: #fff;
+  text-align: center;
+}
+.user-modal-container .title .close {
+  color: #fff;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 35px;
+  font-weight: bold;
+}
+.user-modal-container .close:hover,
+.user-modal-container .close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.user-modal-container .search-icon {
+  display: flex;
+  margin-right: 350px;
+  justify-content: center;
+  align-items: center;
+}
+.user-modal-container .search-icon i {
+  font-size: 25px;
+  color: #00bfa6;
+  margin-top: 20px;
+  margin-right: 340px;
+}
+.user-modal-container .search-icon .icon {
+  padding: 5px;
+  margin-top: 2px;
+}
+
+.user-modal-container .search-icon #myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-color: #fff;
+  color: black;
+  border-radius: 55px;
+  outline-color: #00bfa6;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #00bfa6;
+  margin-bottom: 12px;
+}
+
+.user-modal-container .search-icon .input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+.user-modal-container .body h4 {
+  font-size: 35px;
+}
+.user-modal-container .body .recordsTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+}
+
+.user-modal-container .body .recordsTable thead tr th,
+.user-modal-container .body .recordsTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+.user-modal-container .body .recordsTable thead tr th,
+.user-modal-container .body .recordsTable tbody tr:hover {
+  background-color: #20dbc2;
+}
+
+.user-modal-container .title .close {
+  color: #fff;
+  float: right;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.user-modal-container .title .close:hover,
+.user-modal-container .title .close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}

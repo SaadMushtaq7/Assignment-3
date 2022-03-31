@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*background-color: #fff;
+  color: #00bfa6;*/
+}
+.stat-modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 180px;
+}
+.stat-modal-container .title {
+  margin-top: 50px;
+}
+.stat-modal-container .title h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #00bfa6;
+}
+.stat-modal-container .search-icon #myInput {
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 400px;
+  background-color: #fff;
+  color: black;
+  border-radius: 55px;
+  outline-color: #00bfa6;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #00bfa6;
+  margin-bottom: 12px;
+}
+.stat-modal-container .search-icon i {
+  position: absolute;
+  color: #00bfa6;
+}
+.stat-modal-container .search-icon .icon {
+  margin-top: 17px;
+  margin-left: 10px;
+  background-color: #fff;
+}
+.stat-modal-container .body {
+  display: flex;
+  flex-direction: column;
+}
+.stat-modal-container .sorting {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.stat-modal-container .sorting button {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: #20dbc2;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  margin-right: 5px;
+  transition: all 0.5s;
+
+  align-items: center;
+}
+.stat-modal-container .sorting button:hover {
+  background-color: #00bfa6;
+  color: #fff;
+}
+.stat-modal-container .sorting button i {
+  color: #fff;
+}
+.stat-modal-container .body .recordsTable {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 18px;
+}
+
+.stat-modal-container .body .recordsTable thead tr th,
+.stat-modal-container .body .recordsTable td {
+  text-align: left;
+  padding: 12px;
+  background-color: #00bfa6;
+  color: #fff;
+
+  padding: 12px 100px;
+}
+
+.stat-modal-container .body .recordsTable thead tr th,
+.stat-modal-container .body .recordsTable tbody tr:hover {
+  background-color: #20dbc2;
+}
