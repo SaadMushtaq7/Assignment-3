@@ -140,6 +140,7 @@ export default function Setting() {
       <div className="add-employee">
         <h3>Add Employee</h3>
         <div className="add-employee-form">
+          <p>First Name</p>
           <input
             type="text"
             placeholder="First Name"
@@ -147,6 +148,7 @@ export default function Setting() {
               setFName(e.target.value);
             }}
           />
+          <p>Last Name</p>
           <input
             type="text"
             placeholder="Last Name"
@@ -154,6 +156,7 @@ export default function Setting() {
               setLName(e.target.value);
             }}
           />
+          <p>Position</p>
           <input
             type="text"
             placeholder="Position"
@@ -161,6 +164,7 @@ export default function Setting() {
               setPosition(e.target.value);
             }}
           />
+          <p>Email</p>
           <input
             type="email"
             placeholder="Email"
@@ -181,6 +185,7 @@ export default function Setting() {
             <input
               type="text"
               placeholder="Office Hours Start"
+              className="fname"
               value={startTimer}
               onChange={(e) => {
                 setStartTimer(e.target.value);
@@ -195,8 +200,6 @@ export default function Setting() {
                 setFinishTimer(e.target.value);
               }}
             />
-          </div>
-          <div className="working-hours">
             <p>Work Hrs</p>
             <input
               type="text"

@@ -18,6 +18,7 @@
 .available-modal-container .title h2 {
   font-size: 40px;
   margin-bottom: 25px;
+  color: #00bfa6;
 }
 .available-modal-container .search-icon #myInput {
   background-position: 10px 10px;
