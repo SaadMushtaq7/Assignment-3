@@ -5,7 +5,7 @@ import { actionCreators } from "../redux/state/index";
 import "../../styles/admin-edit-modal.css";
 
 export default function EditUser({ setEdit, userToEdit }) {
-  const [first, last] = userToEdit.name.split(" ");
+  const [first, last] = userToEdit.name.split(/[A-Z][a-z]+/g);
   const [updatedUser, setUpdatedUser] = useState({});
   const [fName, setFName] = useState(first);
   const [lName, setLName] = useState(last);
