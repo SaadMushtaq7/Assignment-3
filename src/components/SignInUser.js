@@ -122,6 +122,7 @@ export default function SignInUser() {
           setPassword={setPassword}
           currentUser={currentUser}
           setCurrentUser={setCurrentUser}
+          setPincode={setPincode}
         />
       )}
     </div>

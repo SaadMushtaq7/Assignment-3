@@ -20,6 +20,7 @@ export default function ChangePassword({
   const dispatch = useDispatch();
   const { changePassword } = bindActionCreators(actionCreators, dispatch);
   function handleOnClick(e) {
+    console.log(newPassword);
     e.stopPropagation();
     if (
       newPassword !== "" &&
