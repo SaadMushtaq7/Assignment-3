@@ -37,6 +37,31 @@ export default function OverallStats() {
     setFirstIndex(users[0].id);
   }
 
+  function handleSortHrsUp() {
+    users.sort((a, b) => {
+      if (a.workingHours < b.workingHours) {
+        return -1;
+      }
+      if (a.workingHours > b.workingHours) {
+        return 1;
+      }
+      return 0;
+    });
+    setFirstIndex(users[0].id);
+  }
+  function handleSortHrsDown() {
+    users.sort((a, b) => {
+      if (a.workingHours > b.workingHours) {
+        return -1;
+      }
+      if (a.workingHours < b.workingHours) {
+        return 1;
+      }
+      return 0;
+    });
+    setFirstIndex(users[0].id);
+  }
+
   return (
     <div>
       <div className="stat-modal-container">
@@ -58,12 +83,24 @@ export default function OverallStats() {
         </div>
         <div className="body">
           <div className="sorting">
-            <button onClick={handleSortUp}>
-              <i className="fa-solid fa-sort-up"></i>
-            </button>
-            <button onClick={handleSortDown}>
-              <i className="fa-solid fa-sort-down"></i>
-            </button>
+            <div className="sort-name">
+              <p>Name</p>
+              <button onClick={handleSortUp}>
+                <i className="fa-solid fa-sort-up"></i>
+              </button>
+              <button onClick={handleSortDown}>
+                <i className="fa-solid fa-sort-down"></i>
+              </button>
+            </div>
+            <div className="sort-time">
+              <p>Working Hrs</p>
+              <button onClick={handleSortHrsUp}>
+                <i className="fa-solid fa-sort-up"></i>
+              </button>
+              <button onClick={handleSortHrsDown}>
+                <i className="fa-solid fa-sort-down"></i>
+              </button>
+            </div>
           </div>
           <table className="recordsTable">
             <thead>

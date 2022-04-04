@@ -53,10 +53,24 @@
 }
 .stat-modal-container .sorting {
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: flex-end;
 }
-.stat-modal-container .sorting button {
+.stat-modal-container .sorting .sort-name,
+.stat-modal-container .sorting .sort-time{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.stat-modal-container .sorting .sort-name p,
+.stat-modal-container .sorting .sort-time p{
+  color: #00bfa6;
+  margin: 10px;
+}
+.stat-modal-container .sorting .sort-name button,
+.stat-modal-container .sorting .sort-time button {
   width: 30px;
   height: 30px;
   outline: none;

@@ -15,6 +15,7 @@ export default function Setting() {
   const [lName, setLName] = useState("");
   const [position, setPosition] = useState("");
   const [email, setEmail] = useState("");
+  const [dept, setDept] = useState("");
   const [userClicked, setUserClicked] = useState({});
 
   const users = useSelector((state) => state.users);
@@ -31,6 +32,7 @@ export default function Setting() {
       id: users.length + 1,
       name: fName + lName,
       email: email,
+      dept: dept,
       firstTime: true,
       isAdmin: false,
       pincode: "0000",
@@ -154,6 +156,14 @@ export default function Setting() {
             placeholder="Last Name"
             onChange={(e) => {
               setLName(e.target.value);
+            }}
+          />
+          <p>Dept.</p>
+          <input
+            type="text"
+            placeholder="Dept."
+            onChange={(e) => {
+              setDept(e.target.value);
             }}
           />
           <p>Position</p>

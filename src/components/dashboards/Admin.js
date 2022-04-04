@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import "../../styles/admin-dashboard.css";
 import { Link } from "react-router-dom";
@@ -6,9 +6,17 @@ import { Link } from "react-router-dom";
 export default function Admin() {
   const location = useLocation();
   const currentUser = location.state;
+  const [message, setMessage] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setMessage(false);
+    }, 3000);
+  });
+  const done = "Login Successful!";
   console.log(currentUser);
   return (
     <div className="admin-container">
+      {message ? <h3 className="message">{done}</h3> : ""}
       <div className="admin-setting">
         <Link to="/adminDashboard/settings">
           <button>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 import "../../styles/user-dashboard.css";
 import UserModal from "./UserModal";
@@ -6,6 +6,13 @@ import UserModal from "./UserModal";
 export default function User() {
   const location = useLocation();
   const currentUser = location.state;
+  const [message, setMessage] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setMessage(false);
+    }, 3000);
+  });
+  const done = "Login Successful!";
 
   const [showRecord, setShowRecord] = useState(false);
   const [applyLeave, setApplyLeave] = useState(currentUser.onLeave);
@@ -20,6 +27,7 @@ export default function User() {
   }
   return (
     <div className="user-container">
+      {message ? <h3 className="message">{done}</h3> : ""}
       <div className="img-container">
         <img
           src="https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png"

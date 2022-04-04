@@ -15,6 +15,8 @@ export default function ChangePassword({
   //}, [currentUser]);
   const [newPassword, setNewPassword] = useState("");
   const [confirmNewPassword, setConfirmNewPassword] = useState("");
+  const [errorCheck, setErrorCheck] = useState(false);
+  const [errorType, setErrorType] = useState("");
   const dispatch = useDispatch();
   const { changePassword } = bindActionCreators(actionCreators, dispatch);
   function handleOnClick(e) {
@@ -43,10 +45,22 @@ export default function ChangePassword({
       console.log(updateUser.pincode);
       setCurrentUser(updateUser);
       changePassword(updateUser);
+
+      setTimeout(() => {
+        setPassword(false);
+      }, 5000);
+    } else if (newPassword === "") {
+      setErrorType("No Pincode Entered  ");
+      setErrorCheck(true);
+    } else if (newPassword === confirmNewPassword) {
+      setErrorType("Pincode doesnot match  ");
+      setErrorCheck(true);
+    } else if (newPassword.length !== 4) {
+      setErrorType("Pincode length must be 4  ");
+      setErrorCheck(true);
+    } else {
+      setErrorCheck(true);
     }
-    setTimeout(() => {
-      setPassword(false);
-    }, 5000);
   }
 
   return (
@@ -79,16 +93,28 @@ export default function ChangePassword({
           />
         </div>
         <div className="footer">
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setPassword(false);
-            }}
-            id="cancelBtn"
-          >
-            Cancel
-          </button>
-          <button onClick={(e) => handleOnClick(e)}>Save</button>
+          {errorCheck ? (
+            <div className="passwordFailed">
+              <p>
+                Error! {errorType}
+                <i className="fa-solid fa-circle-info"></i>
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
+          <div>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setPassword(false);
+              }}
+              id="cancelBtn"
+            >
+              Cancel
+            </button>
+            <button onClick={(e) => handleOnClick(e)}>Save</button>
+          </div>
         </div>
       </div>
     </div>

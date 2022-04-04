@@ -5,6 +5,7 @@ import ChangePassword from "./dashboards/ChangePassword";
 import "../styles/signin.css";
 
 export default function SignInUser() {
+  const users = useSelector((state) => state.users);
   const [name, setName] = useState("");
   const [pincode, setPincode] = useState("");
   const [loginSuccess, setLoginSuccess] = useState(-1);
@@ -12,7 +13,6 @@ export default function SignInUser() {
   const [currentUser, setCurrentUser] = useState({});
   const [loginCounter, setLoginCounter] = useState(0);
 
-  const users = useSelector((state) => state.users);
   const authUserLogin = async () => {
     let index = -1;
     if (loginCounter === 0) {
@@ -24,18 +24,14 @@ export default function SignInUser() {
       setPassword(true);
       setCurrentUser(users[index]);
       if (users[index].pincode === pincode) {
-        console.log("mmmm");
         setLoginSuccess(1);
       } else if (users[index].pincode === pincode && users[index].firstTime) {
-        console.log("nnnn");
         setPassword(true);
         setLoginSuccess(2);
       } else {
-        console.log("0000");
         setLoginSuccess(0);
       }
     } else {
-      console.log("pppppp");
       setLoginSuccess(0);
     }
   };
@@ -67,6 +63,7 @@ export default function SignInUser() {
                   }}
                 />
               </div>
+
               {loginSuccess === 0 ? (
                 <div className="loginFailed">
                   <p>

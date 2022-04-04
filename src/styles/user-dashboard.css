@@ -15,6 +15,15 @@
   margin: 0;
   padding: 0;
 }
+.user-container .message{
+  color: #fff;
+  width: 95%;
+  margin: 5px 100px;
+  background-color: #00bfa6;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
 .img-container {
   display: flex;
   justify-content: center;

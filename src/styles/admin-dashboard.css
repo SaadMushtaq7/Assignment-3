@@ -15,6 +15,15 @@
   margin: 0;
   padding: 0;
 }
+.admin-container .message{
+  color: #fff;
+  width: 95%;
+  margin: 5px 100px;
+  background-color: #00bfa6;
+  text-align: center;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
 .admin-container .admin-setting {
   width: 80%;
   display: flex;
